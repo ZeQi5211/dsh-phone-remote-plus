@@ -1,0 +1,65 @@
+{
+  "name": "dsh-phone-remote-plus",
+  "version": "1.0.0",
+  "description": "手机遥控增强版（dsh-phone-remote 的 fork）：在官方 v1.3.0 基础上修复两个问题 —— 手机端会话列表实时刷新，以及 Agent 提问（ask_user_question）在手机上不再隐身、改为显示带序号的提示卡片。Phone control for DeepSeek Harness with a live-refreshing session list and a readable question notice on the phone.",
+  "license": "MIT",
+  "author": "tofar",
+  "contributors": [
+    "ZeQi5211"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "icon": "./icon.svg",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "lib",
+    "locale",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek",
+    "deepseek-harness",
+    "mobile",
+    "phone",
+    "remote",
+    "remote-control",
+    "lan",
+    "tailscale",
+    "手机遥控",
+    "phone-remote-plus"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZeQi5211/dsh-phone-remote-plus.git"
+  },
+  "homepage": "https://github.com/ZeQi5211/dsh-phone-remote-plus#readme",
+  "bugs": {
+    "url": "https://github.com/ZeQi5211/dsh-phone-remote-plus/issues"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
